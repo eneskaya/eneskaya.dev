@@ -13,7 +13,7 @@ import {
 
 import { createStitches } from "@stitches/react";
 
-const { styled, createTheme, globalCss } = createStitches({
+const { styled, createTheme, globalCss, getCssText } = createStitches({
   theme: {
     colors: {
       ...gray,
@@ -73,4 +73,4 @@ const globalStyles = globalCss({
   },
 });
 
-export { darkTheme, styled, globalStyles };
+export { darkTheme, styled, globalStyles, getCssText };
