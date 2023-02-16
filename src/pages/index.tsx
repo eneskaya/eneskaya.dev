@@ -1,8 +1,9 @@
 import * as React from "react";
-import type { HeadFC, PageProps } from "gatsby";
+import { graphql, HeadFC, Link, PageProps } from "gatsby";
 
 import { MainLayout } from "../layout/main";
 import { styled } from "../layout/theme";
+import { AllMarkdownData } from "../common/types";
 
 const Section = styled("section", {
   margin: "0 auto",
@@ -13,6 +14,11 @@ const Section = styled("section", {
 
 const H1 = styled("h1", {
   paddingBottom: "$md",
+  fontSize: "$lg",
+});
+
+const H2 = styled("h1", {
+  paddingBottom: "$md",
   fontSize: "$md",
 });
 
@@ -21,13 +27,28 @@ const Paragraph = styled("p", {
   paddingBottom: "$md",
 });
 
+const List = styled("ul", {
+  marginLeft: "$md",
+});
+
+const Small = styled("small", {
+  fontSize: "$xs",
+  color: "$gray11",
+});
+
 const SocialContainer = styled("div", {
   display: "flex",
   marginTop: "$md",
   gap: "$sm",
 });
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage: React.FC<PageProps<AllMarkdownData>> = ({ data }) => {
+  const {
+    allMarkdownRemark: { edges },
+  } = data;
+
+  console.log(edges);
+
   return (
     <MainLayout>
       <Section>
@@ -53,6 +74,20 @@ const IndexPage: React.FC<PageProps> = () => {
           <a href="https://github.com/eneskaya">GitHub</a>
         </SocialContainer>
       </Section>
+
+      <Section>
+        <H2>Writing</H2>
+        <List>
+          {edges.map(({ node }) => {
+            return (
+              <li>
+                <Link to={node.frontmatter.slug}>{node.frontmatter.title}</Link>
+                , <Small>{node.frontmatter.date}</Small>
+              </li>
+            );
+          })}
+        </List>
+      </Section>
     </MainLayout>
   );
 };
@@ -64,3 +99,21 @@ export const Head: HeadFC = () => (
     <title>Enes Kaya</title>
   </>
 );
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD.MM.yyyy")
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`;

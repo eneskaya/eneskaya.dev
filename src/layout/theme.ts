@@ -29,7 +29,7 @@ const { styled, globalCss, getCssText } = createStitches({
       lg: "2rem",
     },
     fontSizes: {
-      xs: "0.25rem",
+      xs: "0.75rem",
       sm: "1rem",
       md: "1.25rem",
       lg: "2rem",
