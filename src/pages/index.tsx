@@ -2,11 +2,11 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 
 import { MainLayout } from "../layout/main";
-import { darkTheme, styled } from "../layout/theme";
+import { styled } from "../layout/theme";
 
 const Section = styled("section", {
   margin: "0 auto",
-  maxWidth: "$md",
+  maxWidth: "$sm",
   marginTop: "$lg",
   padding: "$sm",
 });
@@ -29,7 +29,7 @@ const SocialContainer = styled("div", {
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <MainLayout className={darkTheme}>
+    <MainLayout>
       <Section>
         <H1>Hello 👋</H1>
         <Paragraph>
@@ -61,7 +61,6 @@ export default IndexPage;
 
 export const Head: HeadFC = () => (
   <>
-    <body className={darkTheme} />
-    <title>Enes Kaya | Software Engineering</title>
+    <title>Enes Kaya</title>
   </>
 );

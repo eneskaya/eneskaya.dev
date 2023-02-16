@@ -13,15 +13,14 @@ import {
 
 import { createStitches } from "@stitches/react";
 
-const { styled, createTheme, globalCss, getCssText } = createStitches({
+const { styled, globalCss, getCssText } = createStitches({
   theme: {
     colors: {
-      ...gray,
-      ...blue,
-      ...red,
-      ...green,
-      ...sky,
-      primaryText: gray.gray4,
+      ...grayDark,
+      ...blueDark,
+      ...redDark,
+      ...greenDark,
+      ...skyDark,
     },
     space: {
       xs: "0.25rem",
@@ -48,20 +47,9 @@ const { styled, createTheme, globalCss, getCssText } = createStitches({
   },
 });
 
-const darkTheme = createTheme("dark-theme", {
-  colors: {
-    ...grayDark,
-    ...blueDark,
-    ...redDark,
-    ...greenDark,
-    ...skyDark,
-    primaryText: gray.gray2,
-  },
-});
-
 const globalStyles = globalCss({
-  body: { backgroundColor: "$sky1", color: "gray1" },
-  a: { color: "$blue9", textDecoration: "none" },
+  body: { backgroundColor: "$sky3", color: "$gray12" },
+  a: { color: "$red11", textDecoration: "none" },
   "*": {
     margin: 0,
     padding: 0,
@@ -73,4 +61,4 @@ const globalStyles = globalCss({
   },
 });
 
-export { darkTheme, styled, globalStyles, getCssText };
+export { styled, globalStyles, getCssText };
