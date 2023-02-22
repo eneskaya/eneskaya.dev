@@ -63,9 +63,8 @@ const IndexPage: React.FC<PageProps<AllMarkdownData>> = ({ data }) => {
           I founded two companies, where I've learnt to love working on all
           facettes of a product, from conception to fund-raising, to marketing.
           I have also worked at larger organizations, like Spotify. Lately, I
-          focus on frontend engineering with React and experiment with building{" "}
-          <a href="https://localfirstweb.dev/">local-first web applications</a>{" "}
-          which I want to explore further here in 2023.
+          focus on frontend engineering with React and experiment with building
+          my own software business.
         </Paragraph>
         Find me on the socials:
         <SocialContainer>
