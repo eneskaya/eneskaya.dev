@@ -1,5 +1,6 @@
-import { graphql, PageProps } from "gatsby";
 import React from "react";
+import { graphql, HeadFC, PageProps } from "gatsby";
+
 import { MarkdownData } from "../common/types";
 import { MainLayout } from "../layout/main";
 import { styled } from "../layout/theme";
@@ -40,6 +41,12 @@ const BlogPostTemplate: React.FC<PageProps<MarkdownData>> = (props) => {
 };
 
 export default BlogPostTemplate;
+
+export const Head: HeadFC<MarkdownData> = ({ data }) => (
+  <>
+    <title>{data.markdownRemark.frontmatter.title} | Enes Kaya</title>
+  </>
+);
 
 export const pageQuery = graphql`
   query ($id: String!) {

@@ -5,7 +5,5 @@
   },
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "editor.fontSize": 16,
-  "editor.rulers": {},
-  "editor.renderLineHighlight": "line"
+  "editor.fontSize": 12
 }
