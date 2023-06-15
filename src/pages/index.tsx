@@ -47,8 +47,6 @@ const IndexPage: React.FC<PageProps<AllMarkdownData>> = ({ data }) => {
     allMarkdownRemark: { edges },
   } = data;
 
-  console.log(edges);
-
   return (
     <MainLayout>
       <Section>

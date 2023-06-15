@@ -1,13 +1,8 @@
 import {
-  blue,
   blueDark,
-  gray,
   grayDark,
-  green,
   greenDark,
-  red,
   redDark,
-  sky,
   skyDark,
 } from "@radix-ui/colors";
 
@@ -48,7 +43,7 @@ const { styled, globalCss, getCssText } = createStitches({
 });
 
 const globalStyles = globalCss({
-  body: { backgroundColor: "$sky3", color: "$gray12" },
+  body: { backgroundColor: "$gray2", color: "$gray12" },
   a: { color: "$red11", textDecoration: "none" },
   "*": {
     margin: 0,
@@ -56,8 +51,9 @@ const globalStyles = globalCss({
     border: 0,
     fontSize: "100%",
     fontFamily:
-      '"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu, Cantarell,"Open Sans","Helvetica Neue",sans-serif;',
+      '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
     verticalAlign: "baseline",
+    ["-webkit-font-smoothing"]: "antialiased",
   },
 });
 

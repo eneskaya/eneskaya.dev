@@ -18,11 +18,18 @@ const H1 = styled("h1", {
 });
 
 const Article = styled("article", {
-  lineHeight: 1.4,
-  fontSize: "$md",
+  lineHeight: 1.5,
+  fontSize: "$sm",
   ["p"]: {
     marginBottom: "$sm",
   },
+});
+
+const Small = styled("small", {
+  display: "block",
+  fontSize: "$sm",
+  color: "$gray11",
+  marginBottom: "$sm",
 });
 
 const BlogPostTemplate: React.FC<PageProps<MarkdownData>> = (props) => {
@@ -32,7 +39,7 @@ const BlogPostTemplate: React.FC<PageProps<MarkdownData>> = (props) => {
     <MainLayout>
       <Section>
         <H1>{post.frontmatter.title}</H1>
-        <p>Published on {post.frontmatter.date}</p>
+        <Small>Published on {post.frontmatter.date}</Small>
         <br />
         <Article dangerouslySetInnerHTML={{ __html: post.html }}></Article>
       </Section>
