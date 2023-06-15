@@ -36,6 +36,7 @@ const { styled, globalCss, getCssText } = createStitches({
     },
   },
   media: {
+    xs: "(max-width: 639px)",
     sm: "(min-width: 640px)",
     md: "(min-width: 768px)",
     lg: "(min-width: 1024px)",
@@ -44,7 +45,13 @@ const { styled, globalCss, getCssText } = createStitches({
 
 const globalStyles = globalCss({
   body: { backgroundColor: "$gray2", color: "$gray12" },
-  a: { color: "$red11", textDecoration: "none" },
+  a: {
+    color: "$gray12",
+    textDecoration: "underline",
+    textDecorationColor: "$gray10",
+    textDecorationThickness: "1px",
+    textUnderlineOffset: "3px",
+  },
   "*": {
     margin: 0,
     padding: 0,

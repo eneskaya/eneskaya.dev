@@ -1,35 +1,47 @@
 import React from "react";
-import { graphql, HeadFC, PageProps } from "gatsby";
+import { graphql, HeadFC, Link as GatsbyLink, PageProps } from "gatsby";
+import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 
 import { MarkdownData } from "../common/types";
 import { MainLayout } from "../layout/main";
 import { styled } from "../layout/theme";
+import { Typography } from "./Typography";
 
 const Section = styled("section", {
   margin: "0 auto",
   maxWidth: "$sm",
-  marginTop: "$lg",
+  marginTop: "$md",
   padding: "$md",
+  position: "relative",
 });
 
-const H1 = styled("h1", {
-  paddingBottom: "$md",
-  fontSize: "$lg",
-});
-
-const Article = styled("article", {
-  lineHeight: 1.5,
-  fontSize: "$sm",
-  ["p"]: {
-    marginBottom: "$sm",
-  },
-});
-
-const Small = styled("small", {
+const PublishedOn = styled("small", {
   display: "block",
-  fontSize: "$sm",
+  fontSize: "14px",
   color: "$gray11",
   marginBottom: "$sm",
+});
+
+const Title = styled("h2", {
+  marginBottom: "$sm",
+  fontSize: "$md",
+  fontWeight: "bold",
+});
+
+const Link = styled(GatsbyLink, {
+  display: "flex",
+  width: "150px",
+  color: "$gray10",
+  alignItems: "center",
+  gap: "$xs",
+  textDecoration: "none",
+  fontSize: "$sm",
+  paddingBottom: "$sm",
+
+  "@lg": {
+    position: "absolute",
+    left: "-100px",
+  },
 });
 
 const BlogPostTemplate: React.FC<PageProps<MarkdownData>> = (props) => {
@@ -38,10 +50,16 @@ const BlogPostTemplate: React.FC<PageProps<MarkdownData>> = (props) => {
   return (
     <MainLayout>
       <Section>
-        <H1>{post.frontmatter.title}</H1>
-        <Small>Published on {post.frontmatter.date}</Small>
+        <Link to="/">
+          <ArrowLeftIcon width={14} /> Home
+        </Link>
+
+        <Title>{post.frontmatter.title}</Title>
+        <PublishedOn>{post.frontmatter.date}</PublishedOn>
         <br />
-        <Article dangerouslySetInnerHTML={{ __html: post.html }}></Article>
+        <Typography.Article
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        ></Typography.Article>
       </Section>
     </MainLayout>
   );
