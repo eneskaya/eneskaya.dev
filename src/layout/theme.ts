@@ -1,21 +1,11 @@
-import {
-  blueDark,
-  grayDark,
-  greenDark,
-  redDark,
-  skyDark,
-} from "@radix-ui/colors";
+import { gray, grayDark } from "@radix-ui/colors";
 
 import { createStitches } from "@stitches/react";
 
-const { styled, globalCss, getCssText } = createStitches({
+const { styled, globalCss, getCssText, createTheme } = createStitches({
   theme: {
     colors: {
-      ...grayDark,
-      ...blueDark,
-      ...redDark,
-      ...greenDark,
-      ...skyDark,
+      ...gray,
     },
     space: {
       xs: "0.25rem",
@@ -43,6 +33,12 @@ const { styled, globalCss, getCssText } = createStitches({
   },
 });
 
+const darkTheme = createTheme("dark-theme", {
+  colors: {
+    ...grayDark,
+  },
+});
+
 const globalStyles = globalCss({
   body: { backgroundColor: "$gray2", color: "$gray12" },
   a: {
@@ -64,4 +60,4 @@ const globalStyles = globalCss({
   },
 });
 
-export { styled, globalStyles, getCssText };
+export { styled, globalStyles, getCssText, darkTheme };

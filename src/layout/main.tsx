@@ -1,5 +1,6 @@
 import * as React from "react";
-import { globalStyles, styled } from "./theme";
+import { darkTheme, globalStyles, styled } from "./theme";
+import { useThemeChecker } from "../hooks/useThemeChecker";
 
 const Main = styled("main", {
   margin: "0 auto",
@@ -15,6 +16,8 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
   ...rest
 }) => {
   globalStyles();
+
+  useThemeChecker(darkTheme);
 
   return <Main {...rest}>{children}</Main>;
 };
