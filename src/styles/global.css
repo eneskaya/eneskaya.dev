@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ul {
+    @apply list-disc ml-6;
+  }
+
+  a {
+    @apply text-green-300;
+  }
+}
+
+@layer components {
+  .article p {
+    @apply text-zinc-200 my-6 leading-6;
+  }
+}
