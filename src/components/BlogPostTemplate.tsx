@@ -13,7 +13,7 @@ const BlogPostTemplate: React.FC<PageProps<MarkdownData>> = (props) => {
     <MainLayout>
       <section className="my-8">
         <Link
-          className="md:absolute md:-ml-[150px] flex w-[150px] text-zinc-300 items-center gap-3 text-md pb-2"
+          className="lg:absolute lg:-ml-[150px] flex w-[150px] text-zinc-300 items-center gap-3 text-md pb-2"
           to="/"
         >
           <ArrowLeftIcon width={14} /> Home
@@ -22,7 +22,7 @@ const BlogPostTemplate: React.FC<PageProps<MarkdownData>> = (props) => {
         <Typography.H1 className="font-bold">
           {post.frontmatter.title}
         </Typography.H1>
-        <small className="text-zinc-300">{post.frontmatter.date}</small>
+        <small className="text-zinc-500">{post.frontmatter.date}</small>
         <br />
         <article
           className="article"
