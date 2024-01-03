@@ -4,6 +4,8 @@ slug: "/blog/laid-off"
 date: "2023-02-16"
 ---
 
+> UPDATE 2023-10: As a disclaimer, since writing this post, I've re-joined Spotify (🎉) as a Software Engineer in another team. I haven't changed anything in the text here and will leave it here as a reminder and hope it helps anybody affected in the future.
+
 I was laid off at Spotify in the 6% workforce reduction [announced](https://techcrunch.com/2023/01/23/spotify-cuts-6-of-its-workforce-impacting-600-people) on January 23rd, 2023. It was a very tough day for a lot of the "bandmates" (this is what Spotify likes to call their employees) and I got to know that I was affected by checking my emails first thing in the morning after only two months of working there (the hiring process took almost longer than the time I was employed there 😅). The subject of the mail was **HR Org Update** and after reading the short paragraph of the invitation I knew what was coming.
 
 It was always a dream of mine to work at a company like Spotify. For one, it's a nice product, that I've been using for almost 7 years now. Everybody I know has a Spotify subscription and uses it every day.
@@ -30,6 +32,6 @@ At Spotify, the formation of unions is in full swing after the layoffs and peopl
 
 [![Gergely Orosz](./tweet.png)](https://twitter.com/GergelyOrosz/status/1536762114190233600)
 
---
+---
 
 Thanks for reading! I am just getting started with writing as a way to learn and grow. If you have feedback for me on that, I'd be more than happy to hear it :) [DM me on Twitter](https://twitter.com/eneskaya)

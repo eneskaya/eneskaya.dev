@@ -20,4 +20,28 @@
   .article img {
     @apply mx-auto my-6 rounded-3xl;
   }
+
+  .article h2 {
+    @apply text-zinc-100 text-2xl font-bold my-6;
+  }
+
+  .article h3 {
+    @apply text-zinc-100 text-xl font-bold my-6;
+  }
+
+  .article blockquote {
+    @apply text-zinc-100 text-xl font-bold my-6 border-l-4 border-green-300 pl-4;
+  }
+
+  .article hr {
+    @apply my-6 border-0 border-t-2 border-zinc-600;
+  }
+
+  .article .footnotes ol {
+    @apply list-decimal ml-4 text-sm text-zinc-100;
+
+    .footnote-backref {
+      @apply text-zinc-300 ml-2;
+    }
+  }
 }
