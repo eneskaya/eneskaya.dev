@@ -8,6 +8,7 @@
     "gatsby"
   ],
   "scripts": {
+    "dev": "yarn develop",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -25,6 +26,7 @@
     "gatsby": "^5.6.0",
     "gatsby-plugin-image": "^3.6.0",
     "gatsby-plugin-sharp": "^5.6.0",
+    "gatsby-remark-classes": "^1.0.2",
     "gatsby-remark-graphviz": "^5.6.0",
     "gatsby-remark-images": "^7.6.0",
     "gatsby-remark-vscode": "^3.3.1",

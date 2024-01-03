@@ -19,7 +19,7 @@ const H1: FC<HTMLAttributes<HTMLHeadingElement>> = ({
   children,
   className,
 }) => (
-  <h1 className={cn("text-3xl mb-6 font-bold text-white", className)}>
+  <h1 className={cn("text-4xl mb-6 font-bold text-white", className)}>
     {children}
   </h1>
 );

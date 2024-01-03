@@ -24,13 +24,20 @@ const config: GatsbyConfig = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          // add gatsby-remark-classes configuration
+          {
+            resolve: `gatsby-remark-classes`,
+            options: {
+              classMap: {},
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 640,
+              maxWidth: 768,
             },
           },
         ],

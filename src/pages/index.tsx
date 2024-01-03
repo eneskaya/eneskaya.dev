@@ -4,7 +4,6 @@ import { graphql, HeadFC, Link, PageProps } from "gatsby";
 import { MainLayout } from "../layout/main";
 import { AllMarkdownData } from "../common/types";
 import { Typography } from "../components/Typography";
-import { BriefcaseIcon, PencilIcon } from "@heroicons/react/24/solid";
 
 const IndexPage: React.FC<PageProps<AllMarkdownData>> = ({ data }) => {
   const {
@@ -13,8 +12,8 @@ const IndexPage: React.FC<PageProps<AllMarkdownData>> = ({ data }) => {
 
   return (
     <MainLayout>
-      <section className="my-8">
-        <Typography.H1>Hello 👋</Typography.H1>
+      <section className="mt-8">
+        <Typography.H1>Hello</Typography.H1>
         <Typography.Paragraph>
           I am Enes Kaya, a product-oriented web engineer, working across the
           full stack. I live in Germany with my beautiful wife and son.
@@ -41,7 +40,7 @@ const IndexPage: React.FC<PageProps<AllMarkdownData>> = ({ data }) => {
       </section>
 
       <section className="mt-10">
-        <Typography.H2 className="font-bold mt-8">My Writing</Typography.H2>
+        <Typography.H2 className="font-bold mt-8">Writing</Typography.H2>
         <Typography.List className="mt-4">
           {edges.map(({ node }) => {
             return (
@@ -70,7 +69,7 @@ export const Head: HeadFC = () => (
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           id

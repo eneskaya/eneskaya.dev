@@ -10,7 +10,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
   ...rest
 }) => {
   return (
-    <main className="mx-auto p-4 max-w-screen-md antialiased" {...rest}>
+    <main className="mx-auto p-4 sm:p-10 max-w-screen-md antialiased" {...rest}>
       {children}
     </main>
   );
