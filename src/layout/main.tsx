@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useThemeChecker } from "../hooks/useThemeChecker";
 
 interface MainLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
