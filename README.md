@@ -1,6 +1,6 @@
 My personal page, written with
 
 - [Gatsby](https://www.gatsbyjs.com/)
-- [Stitches](https://stitches.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
 
 and deployed with GitHub Pages to [eneskaya.dev](https://eneskaya.dev)
